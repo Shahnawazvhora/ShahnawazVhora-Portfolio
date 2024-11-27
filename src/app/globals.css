@@ -19,3 +19,174 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+::-webkit-scrollbar {
+  width: 15px;
+  margin: 0;
+  padding: 0;
+  background-color: #0a192f; /* Dark background color for the scrollbar area */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e3151; /* Dark background for the track */
+  border-radius: 8px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #112240; /* Darker color for the scrollbar handle */
+  border-radius: 10px;
+  border: 3px solid #0a192f; /* Add border to create padding effect */
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.animate-typing {
+  animation: typing 2s steps(20, end);
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.unique-btn {
+  width: fit-content;
+  min-width: 40px;
+  height: auto;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgba(13, 13, 48, 0.9);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px; 
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.unique-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px; 
+  padding: 2px;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      #6E57E0,
+      transparent
+  );
+  background-size: 200% 100%;  /* Adjusted for smoother animation */
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderRotate 9s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% {
+      background-position: 200% 50%;
+  }
+  100% {
+      background-position: -200% 50%;
+  }
+}
+
+.unique-btn img {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(74%) saturate(6313%) hue-rotate(255deg) brightness(101%) contrast(101%);
+}
+
+/* Add responsive adjustments */
+
+@media (max-width: 1024px) {
+  .unique-btn {
+    padding: 8px 16px !important;
+    min-width: auto;
+  }
+  
+  .unique-btn span {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .unique-btn {
+    padding: 6px 12px !important;
+  }
+}
+
+.send-meg-btn {
+  background: rgba(13, 13, 48, 0.9);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-width: fit-content;
+  max-width: 100%;
+  height: auto;
+  min-height: 40px;
+}
+
+.send-meg-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px; 
+  padding: 2px;
+  background: linear-gradient(
+      90deg,
+      transparent,
+      #6E57E0,
+      transparent
+  );
+  background-size: 200% 100%;  /* Adjusted for smoother animation */
+  -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: borderRotate 9s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% {
+      background-position: 200% 50%;
+  }
+  100% {
+      background-position: -200% 50%;
+  }
+}
