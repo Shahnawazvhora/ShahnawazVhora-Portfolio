@@ -190,8 +190,3 @@ img {
       background-position: -200% 50%;
   }
 }
-
-#feedback-toolbar {
-  display: none !important;
-  visibility: hidden !important;
-}
