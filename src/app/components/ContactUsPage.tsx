@@ -197,10 +197,11 @@ export default function ContactUsPage() {
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                       className="absolute left-4 top-1/2 -translate-y-1/2 bg-transparent text-gray-400 border-none focus:outline-none z-10 w-[90px] cursor-pointer flex items-center"
                     >
-                      <img
+                      <Image
                         src={`https://flagcdn.com/24x18/${formData.countryCode.toLowerCase()}.png`}
                         alt={countryData[formData.countryCode].name}
                         className="w-6 h-4 object-cover rounded-sm"
+                        unoptimized
                       />
                     </button>
 
@@ -218,10 +219,11 @@ export default function ContactUsPage() {
                             }}
                             className="flex items-center px-4 py-2 hover:bg-[#1e3a8a] cursor-pointer"
                           >
-                            <img
+                            <Image
                               src={`https://flagcdn.com/24x18/${code.toLowerCase()}.png`}
                               alt={data.name}
                               className="w-6 h-4 object-cover rounded-sm mr-2"
+                              unoptimized
                             />
                             <span className="text-white">{data.name} ({data.code})</span>
                           </div>

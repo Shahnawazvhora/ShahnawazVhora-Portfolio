@@ -27,7 +27,7 @@ export default function About() {
           className="lg:col-span-2 space-y-4 md:space-y-6"
         >
           <div className="text-white text-base md:text-lg">
-            Hi there! Nice to meet you, I'm a Front-End Developer based in 8th of Sep, 
+            Hi there! Nice to meet you, I&apos;m a Front-End Developer based in 8th of Sep, 
             <span className="inline-flex items-center">
               Ahmedabad, India
               <Image 
@@ -41,7 +41,7 @@ export default function About() {
           </div>
           
           <p className="text-gray-400">
-            I'm a self-learned, self-motivated, diligent and persevering with over 2+ years of experience in Front-End Development. I'm perpetually working on improving and educating myself to achieve efficiency and effectiveness in whatever craft. I possess the ability to analyze, gather information and identify key resources to execute an effective plan to produce outstanding web applications.
+            I&apos;m a self-learned, self-motivated, diligent and persevering with over 2+ years of experience in Front-End Development. I&apos;m perpetually working on improving and educating myself to achieve efficiency and effectiveness in whatever craft. I possess the ability to analyze, gather information and identify key resources to execute an effective plan to produce outstanding web applications.
           </p>
 
           {/* Tech Stack Section */}

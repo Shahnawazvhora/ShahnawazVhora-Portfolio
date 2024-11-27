@@ -26,7 +26,7 @@ export default function Footer() {
             { href: "https://linkedin.com/in/shahnawazvhora/", icon: "/icons/icons8-linkedin.svg", alt: "LinkedIn" },
             { href: "https://instagram.com/_nawaaaazzzz_", icon: "/icons/icons8-instagram.svg", alt: "Instagram" },
             { href: "https://twitter.com/shahnawaz_vhora", icon: "/icons/icons8-twitterx.svg", alt: "Twitter" }
-          ].map((social, index) => (
+          ].map((social) => (
             <motion.div
               key={social.alt}
               whileHover={{ scale: 1.1 }}

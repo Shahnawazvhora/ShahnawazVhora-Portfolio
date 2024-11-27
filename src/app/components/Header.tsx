@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { motion } from "framer-motion";
 
 export default function Header() {
@@ -9,11 +9,11 @@ export default function Header() {
     const [loopNum, setLoopNum] = useState(0);
     const [delta, setDelta] = useState(200);
 
-    const phrases = [
+    const phrases = useMemo(() => [
         'Front End Developer.',
         'UI/UX Designer.',
         'Software Engineer.'
-    ];
+    ], []);
 
     useEffect(() => {
         const tick = () => {
@@ -37,7 +37,7 @@ export default function Header() {
             }
         };
 
-        let ticker = setTimeout(tick, delta);
+        const ticker = setTimeout(tick, delta);
         return () => clearTimeout(ticker);
     }, [text, delta, loopNum, isDeleting, phrases]);
 
