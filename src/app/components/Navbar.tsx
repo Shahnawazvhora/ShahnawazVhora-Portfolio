@@ -18,7 +18,7 @@ export default function Navbar() {
     setIsLoading(true)
     router.push(path)
     // Reset loading after navigation
-    setTimeout(() => setIsLoading(false), 2000)
+    setTimeout(() => setIsLoading(false), 3000)
   }, [router, setIsLoading])
 
   const toggleMenu = () => {
