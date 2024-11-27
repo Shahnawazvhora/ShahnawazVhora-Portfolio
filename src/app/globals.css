@@ -190,3 +190,24 @@ img {
       background-position: -200% 50%;
   }
 }
+
+/* If using Tailwind, you can also add these utility classes */
+.hidden-toolbar {
+  @apply hidden invisible;
+}
+
+/* Add these rules at the end of your file */
+.claude-toolbar,
+[class*="claude-toolbar"],
+.toolbar,
+[data-testid="toolbar"],
+[class*="toolbar"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
