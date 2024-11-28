@@ -14,7 +14,7 @@ export default function ContactUsPage() {
     lastName: '',
     email: '',
     phoneNumber: '',
-    countryCode: 'US' as CountryCode,
+    countryCode: 'IN' as CountryCode,
     message: ''
   });
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -84,7 +84,7 @@ export default function ContactUsPage() {
           lastName: '',
           email: '',
           phoneNumber: '',
-          countryCode: 'US' as CountryCode,
+          countryCode: 'IN' as CountryCode,
           message: ''
         });
       }
@@ -202,6 +202,8 @@ export default function ContactUsPage() {
                         alt={countryData[formData.countryCode].name}
                         className="w-6 h-4 object-cover rounded-sm"
                         unoptimized
+                        width={24}
+                        height={18}
                       />
                     </button>
 
@@ -224,6 +226,8 @@ export default function ContactUsPage() {
                               alt={data.name}
                               className="w-6 h-4 object-cover rounded-sm mr-2"
                               unoptimized
+                              width={24}
+                              height={18}
                             />
                             <span className="text-white">{data.name} ({data.code})</span>
                           </div>
